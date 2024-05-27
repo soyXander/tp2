@@ -1,0 +1,26 @@
+const $ = (id) => document.getElementById(id)
+const resultado = $("resultado")
+
+// Evento submit del formulario
+$("formulario").addEventListener("submit", (e) => {
+  // Prevenir el comportamiento predeterminado del formulario
+  e.preventDefault()
+
+  // Obtener los valores del formulario
+  const ladoA = parseFloat($("lado-a").value)
+  const ladoB = parseFloat($("lado-b").value)
+  const ladoC = parseFloat($("lado-c").value)
+
+  // Validar los datos
+  if (!ladoA || !ladoB || !ladoC) {
+    alert("Por favor, ingrese valores válidos.")
+    resultado.innerText = "Esperando calculo..."
+    return
+  }
+
+  // Calcular area
+  const area = ((ladoA - ladoC) * ladoB) / 2 + ladoB * ladoC
+
+  // Mostrar el resultado en una alerta
+  resultado.innerText = `El area del terreno es ${area.toFixed(2)} mts.`
+})

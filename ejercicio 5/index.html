@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Area de Terreno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora de Area de Terreno </h1>
+        <form id="formulario">
+            <label for="estatura">Lado A:</label>
+            <input type="number" id="lado-a" name="lado-a" step="0.01">
+            <label for="lado-b">Lado B:</label>
+            <input type="number" id="lado-b" name="lado-b" step="0.01">
+            <label for="lado-c">Lado C:</label>
+            <input type="number" id="lado-c" name="lado-c" step="0.01">
+            <button type="submit">Calcular Area</button>
+        </form>
+    </div>
+
+    <div class="contenedor">
+        <h2>Area de Terreno</h2>
+        <p id="resultado">Esperando calculo...</p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
