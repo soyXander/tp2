@@ -1,8 +1,9 @@
 const $ = (id) => document.getElementById(id)
+const formulario = $("formulario")
 const resultado = $("resultado")
 
 // Evento submit del formulario
-$("formulario").addEventListener("submit", (e) => {
+formulario.addEventListener("submit", (e) => {
   // Prevenir el comportamiento predeterminado del formulario
   e.preventDefault()
 
@@ -16,13 +17,15 @@ $("formulario").addEventListener("submit", (e) => {
     alert("Por favor, ingrese valores válidos.")
     return
   }
+
   // Validar que los valores sean positivos
   if (ladoA < 0 || ladoB < 0 || ladoC < 0) {
     alert("Por favor, ingrese valores positivos.")
     return
   }
+
   // Validar que el lado A sea mayor que el lado C
-  if (!ladoA > ladoC) {
+  if (ladoA < ladoC) {
     alert("El lado A debe ser mayor al lado C")
     return
   }
