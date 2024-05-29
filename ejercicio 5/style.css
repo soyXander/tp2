@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 500px;
     padding: 2rem;
     color: #ccc9dc;
     background-color: #324a5f;

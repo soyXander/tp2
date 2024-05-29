@@ -7,14 +7,23 @@ $("formulario").addEventListener("submit", (e) => {
   e.preventDefault()
 
   // Obtener los valores del formulario
-  const ladoA = parseFloat($("lado-a").value)
-  const ladoB = parseFloat($("lado-b").value)
-  const ladoC = parseFloat($("lado-c").value)
+  const ladoA = $("lado-a").value
+  const ladoB = $("lado-b").value
+  const ladoC = $("lado-c").value
 
   // Validar los datos
   if (!ladoA || !ladoB || !ladoC) {
     alert("Por favor, ingrese valores válidos.")
-    resultado.innerText = "Esperando calculo..."
+    return
+  }
+  // Validar que los valores sean positivos
+  if (ladoA < 0 || ladoB < 0 || ladoC < 0) {
+    alert("Por favor, ingrese valores positivos.")
+    return
+  }
+  // Validar que el lado A sea mayor que el lado C
+  if (!ladoA > ladoC) {
+    alert("El lado A debe ser mayor al lado C")
     return
   }
 
