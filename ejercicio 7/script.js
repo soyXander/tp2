@@ -2,6 +2,7 @@ const $ = (id) => document.getElementById(id)
 const usuarios = $("usuarios")
 const tareas = $("tareas")
 
+// Función para obtener los datos
 const obtenerDatos = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users")
   if (res.ok) {
@@ -70,8 +71,8 @@ const btnVerTareas = (userId, userName) => {
     })
     tareas.innerHTML = `<h2>Tareas de ${userName}</h2>`
     tareas.appendChild(btnCerrar)
-
     tareas.classList.remove("oculto")
+
     // Obtener las tareas
     const res = await fetch(
       `https://jsonplaceholder.typicode.com/users/${userId}/todos`

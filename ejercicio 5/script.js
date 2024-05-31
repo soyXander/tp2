@@ -3,7 +3,7 @@ const formulario = $("formulario")
 const resultado = $("resultado")
 
 // Evento submit del formulario
-formulario.addEventListener("submit", (e) => {
+formulario.onsubmit = (e) => {
   // Prevenir el comportamiento predeterminado del formulario
   e.preventDefault()
 
@@ -35,4 +35,4 @@ formulario.addEventListener("submit", (e) => {
 
   // Mostrar el resultado en una alerta
   resultado.innerText = `El area del terreno es ${area.toFixed(2)} mts.`
-})
+}

@@ -15,7 +15,7 @@ const mensaje = (tipo, mensaje) => {
 }
 
 // Evento submit del formulario
-formulario.addEventListener("submit", (e) => {
+formulario.onsubmit = (e) => {
   // Prevenir el comportamiento predeterminado del formulario
   e.preventDefault()
 
@@ -70,4 +70,4 @@ formulario.addEventListener("submit", (e) => {
 
   // Mensaje de validación exitosa
   mensaje("exito", "Persona verificada correctamente.")
-})
+}
