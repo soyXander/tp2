@@ -8,9 +8,9 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault()
 
   // Obtener los valores del formulario
-  const ladoA = $("lado-a").value
-  const ladoB = $("lado-b").value
-  const ladoC = $("lado-c").value
+  const ladoA = parseFloat($("lado-a").value)
+  const ladoB = parseFloat($("lado-b").value)
+  const ladoC = parseFloat($("lado-c").value)
 
   // Validar los datos
   if (!ladoA || !ladoB || !ladoC) {

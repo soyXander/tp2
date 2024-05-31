@@ -22,8 +22,8 @@ formulario.addEventListener("submit", (e) => {
   // Obtener los valores del formulario
   const nombre = $("nombre").value
   const apellido = $("apellido").value
-  const edad = $("edad").value
-  const altura = $("altura").value
+  const edad = parseInt($("edad").value)
+  const altura = parseFloat($("altura").value)
   const email = $("email").value
 
   // Validar los datos

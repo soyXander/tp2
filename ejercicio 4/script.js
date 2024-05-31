@@ -7,8 +7,8 @@ formulario.onsubmit = (e) => {
   e.preventDefault()
 
   // Obtener los valores del formulario
-  const estatura = $("estatura").value
-  const peso = $("peso").value
+  const estatura = parseFloat($("estatura").value)
+  const peso = parseFloat($("peso").value)
 
   // Validar los datos
   if (!estatura || !peso) {
